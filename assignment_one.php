@@ -19,7 +19,8 @@
 	$total_hamburgers=2*4.95;
 	$milkshake=1.95;
 	$cola     =0.85;
-	$total    =$hamburgers+$milkshake+$cola;
+	$total    =$total_hamburgers+$milkshake+$cola;
+	
 	$tax_rate =$total*7.5/100;
 	$pre_tax_rate=$total*16/100;
 	$total_price=$total+$pre_tax_rate+$tax_rate;
@@ -80,11 +81,16 @@
                    <td> $cola </td>
                  </tr>
                  <tr>
-                    <td colspan=3> Pre Tax </td>
+                    <td colspan=2> Total </td>
+                    <td>4</td>
+                    <td> $total$ </td>
+                 </tr>
+                 <tr>
+                    <td colspan=3> Pre Tax Rate </td>
                     <td> $tax_rate </td>
                  </tr>
                  < tr>
-                    <td colspan=3> Post Tax </td>
+                    <td colspan=3> Post Tax Rate </td>
                     <td> $pre_tax_rate </td>
                   </tr>
                   <tr>
