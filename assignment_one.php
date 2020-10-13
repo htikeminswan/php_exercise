@@ -16,15 +16,15 @@
  	<?php 
 
 	$hamburgers=4.95;
-	$two_hamburgers=2*4.95;
+	$total_hamburgers=2*4.95;
 	$milkshake=1.95;
 	$cola     =0.85;
 	$total    =$hamburgers+$milkshake+$cola;
 	$tax_rate =$total*7.5/100;
-	$pre_tax_tix=$tax_rate *16/100;
-
+	$pre_tax_rate=$total*16/100;
+	$total_price=$total+$pre_tax_rate+$tax_rate;
 	echo"<tr>";
-	echo "<td>Hambagers:$two_hamburgers.$</td>";
+	echo "<td>Hambagers:$hamburgers.$</td>";
 	echo"</tr>";
 	echo"<tr>";
 	echo "<td>milkshake:.$milkshake$</td>";
@@ -33,15 +33,73 @@
 	echo "<td>cola            :$cola$</td>";
 	echo"</tr>";
 	echo"<tr>";
-	echo "<td>Total   Cost:$total$</td>";
+	echo "<td>Total :$total$</td>";
 	echo"</tr>";
 
 	echo"<tr>";
 	echo "<td>Post Tax Rate    :$tax_rate$</td>";
 	echo"</tr>";
 	echo"<tr>";
-	echo "<td>Pre-tax  total   :$pre_tax_tix$</td>";
+	echo "<td>Pre-tax  total   :$pre_tax_rate$</td>";
 	echo"</tr>";
+
+	echo"<tr>";
+	echo "<td>Total Price:$total_price$</td>";
+	echo"</tr>";
+
+
+
+
+	echo "<table border=1 cellpadding=10px>
+           <thead>
+              <tr>
+                <th> Name </th>
+                <th> Price </th>
+                <th> Quantity </th>
+                <th> Sub total </th>
+              </tr>
+           </thead>
+           <tbody>
+                <tr> 
+                  <td> Humburger </td>
+                  <td> $hamburgers </td>
+                  <td> 2 </td>
+                  <td> $total_hamburgers </td>
+                  
+                </tr>
+                <tr>
+                   <td> Chocolate Milkshake </td>
+                   <td> $milkshake </td>
+                   <td> 1 </td>
+                   <td> $milkshake</td>
+                </tr>
+                <tr> 
+                   <td> Cola </td>
+                   <td> $cola </td>
+                   <td> 1 </td>
+                   <td> $cola </td>
+                 </tr>
+                 <tr>
+                    <td colspan=3> Pre Tax </td>
+                    <td> $tax_rate </td>
+                 </tr>
+                 < tr>
+                    <td colspan=3> Post Tax </td>
+                    <td> $pre_tax_rate </td>
+                  </tr>
+                  <tr>
+                     <td colspan=3> Total Price </td>
+                     <td> $total_price </td>
+                  </tr>
+             </tbody>
+      </table>" ;
+
+
+
+
+  
+
+
 
 
 	
