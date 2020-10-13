@@ -50,7 +50,7 @@
 
 
 
-	echo "<table border=1 cellpadding=10px>
+	echo "<table border=1 cellpadding=20px>
            <thead>
               <tr>
                 <th> Name </th>
@@ -61,7 +61,7 @@
            </thead>
            <tbody>
                 <tr> 
-                  <td> Humburger </td>
+                  <td> Hamburger </td>
                   <td> $hamburgers </td>
                   <td> 2 </td>
                   <td> $total_hamburgers </td>
